@@ -33,6 +33,73 @@ UPDATE animals SET owner_id =(SELECT id FROM owners WHERE full_name='Melody Pond
 UPDATE animals SET owner_id =(SELECT id FROM owners WHERE full_name='Dean Winchester') WHERE name = ('Angemon','Boarmon');
 
 
+INSERT INTO vets (name,age,date_of_graduation) VALUES ('William Tatcher',45,'23-4-2000');
+INSERT INTO vets (name,age,date_of_graduation) VALUES ('Maisy Smith',26,'17-1-2019');
+INSERT INTO vets (name,age,date_of_graduation) VALUES ('Stephanie Mendez',64,'4-5-1981');
+INSERT INTO vets (name,age,date_of_graduation) VALUES ('Jack Harkness',38,'8-7-2008')
+
+INSERT INTO specializations (species_id, vet_id) SELECT species.id, vets.id FROM species, vets WHERE species.name = 'Pokemon' AND vets.name = 'William Tatcher';
+INSERT INTO specializations (species_id, vet_id) SELECT species.id, vets.id FROM species, vets WHERE species.name = 'Digimon' AND vets.name = 'Stephanie Mendez';
+INSERT INTO specializations (species_id, vet_id) SELECT species.id, vets.id FROM species, vets WHERE species.name = 'Pokemon' AND vets.name = 'Stephanie Mendez';
+INSERT INTO specializations (species_id, vet_id) SELECT species.id, vets.id FROM species, vets WHERE species.name = 'Digimon' AND vets.name = 'Jack Harkness';
 
 
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Agumon' AND vets.name = 'William Tatcher';
+UPDATE visits SET visit_date = ('24-5-2020') WHERE visit_date IS NULL;
 
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Agumon' AND vets.name = 'Stephanie Mendez';
+UPDATE visits SET visit_date = ('22-7-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Gabumon' AND vets.name = 'Jack Harkness';
+UPDATE visits SET visit_date = ('2--2021') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Pikachu' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('5-1-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Pikachu' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('8-3-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Pikachu' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('14-5-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Devimon' AND vets.name = 'Stephanie Mendez';
+UPDATE visits SET visit_date = ('4-5-2021') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Charmander' AND vets.name = 'Jack Harkness';
+UPDATE visits SET visit_date = ('24-2-2021') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Plantmon' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('21-12-2019') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Plantmon' AND vets.name = 'William Tatcher';
+UPDATE visits SET visit_date = ('10-8-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Plantmon' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('7-4-2021') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Squirtle' AND vets.name = 'Stephanie Mendez';
+UPDATE visits SET visit_date = ('29-9-2019') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Angemon' AND vets.name = 'Jack Harkness';
+UPDATE visits SET visit_date = ('3-10-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Angemon' AND vets.name = 'Jack Harkness';
+UPDATE visits SET visit_date = ('4-11-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Boarmon' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('24-1-2019') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Boarmon' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('15-5-2019') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Boarmon' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('27-2-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Boarmon' AND vets.name = 'Maisy Smith';
+UPDATE visits SET visit_date = ('8-3-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Blossom' AND vets.name = 'Stephanie Mendez';
+UPDATE visits SET visit_date = ('5-24-2020') WHERE visit_date IS NULL;
+
+INSERT INTO visits (animal_id, vet_id) SELECT animals.id, vets.id FROM animals, vets WHERE animals.name = 'Blossom' AND vets.name = 'William Tatcher';
+UPDATE visits SET visit_date = ('11-1-2021') WHERE visit_date IS NULL;
