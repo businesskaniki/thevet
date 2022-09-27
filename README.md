@@ -12,6 +12,13 @@
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
+
+👤 **Tarek**
+
+- GitHub: [@githubhandle](https://github.com/tarek102)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tarek-yosry/)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
