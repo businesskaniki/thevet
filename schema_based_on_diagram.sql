@@ -22,5 +22,16 @@ CREATE TABLE medical_treatment ( id INT GENERATED ALWAYS AS IDENTITY, medical_hi
 /* medical_histories_id  ,  treatments_id */
 
 
+/* Adding Indecies */
 
+CREATE INDEX patient_id_ASC ON medical_histories (patient_id ASC);
 
+CREATE INDEX medical_history_ASC ON invoices (medical_history_id ASC);
+
+CREATE INDEX invoice_id_ASC ON invoice_items (invoice_id ASC);
+
+CREATE INDEX treatment_id_ASC ON invoice_items (treatment_id ASC);
+
+CREATE INDEX medical_histories_id_ASC ON medical_treatment (medical_histories_id ASC);
+
+CREATE INDEX treatments_id_ASC ON medical_treatment (treatments_id ASC);
